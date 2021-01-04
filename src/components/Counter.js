@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 
 export default class Counter extends Component {
+	componentDidUpdate(prevProps, prevState) {
+		console.log("prevProps", prevProps);
+		console.log("prevState", prevState);
+	}
+
 	render() {
 		console.log("Counter - Rendered");
 		return (
@@ -18,7 +23,12 @@ export default class Counter extends Component {
 				>
 					Decrement
 				</button>
-				<button onClick={() => this.props.onDelete(this.props.counter.id)} className="btn btn-danger btn-sm">Delete</button>
+				<button
+					onClick={() => this.props.onDelete(this.props.counter.id)}
+					className="btn btn-danger btn-sm"
+				>
+					Delete
+				</button>
 			</div>
 		);
 	}
@@ -27,10 +37,10 @@ export default class Counter extends Component {
 		let classes = "badge m-2 badge-";
 		classes += this.props.counter.value === 0 ? "warning" : "primary";
 		return classes;
-	}
+	};
 
 	formatCount = () => {
 		const { value } = this.props.counter;
 		return value === 0 ? "Zero" : value;
-	}
+	};
 }

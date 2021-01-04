@@ -50,7 +50,8 @@ export default class App extends Component {
 	handleDelete = (counterId) => {
 		const counters = this.state.counters.filter((c) => c.id !== counterId);
 		this.setState({ counters });
-	};
+  };
+  
 	render() {
     console.log("App - Rendered");
 		return (

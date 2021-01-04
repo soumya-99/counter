@@ -11,8 +11,11 @@ export default class Counter extends Component {
 
 	render() {
 
+		console.log(this.props);
+
 		return (
 			<div>
+				{this.props.children}
 				<span className={this.getBadgeClasses()}>{this.formatCount()}</span>
 				<button
 					onClick={this.handleIncrement}
@@ -24,13 +27,13 @@ export default class Counter extends Component {
 		);
 	}
 
-	getBadgeClasses() {
+	getBadgeClasses = () => {
 		let classes = "badge m-2 badge-";
 		classes += this.state.value === 0 ? "warning" : "primary";
 		return classes;
 	}
 
-	formatCount() {
+	formatCount = () => {
 		const { value } = this.state;
 		return value === 0 ? "Zero" : value;
 	}

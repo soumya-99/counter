@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
-import Counter from './components/Counter';
+import Counters from './components/Counters';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Counter />
+    <Counters />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import Counters from "./components/Counters";
 import Navbar from "./components/Navbar";
 

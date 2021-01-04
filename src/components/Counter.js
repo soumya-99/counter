@@ -3,17 +3,27 @@ import React, { Component } from "react";
 export default class Counter extends Component {
 	state = {
 		count: 0,
-    };
-    
-    handleIncrement() {
-        console.log("Increment CLicked", this);
-    }
+	};
+
+	// constructor() {
+	// 	super();
+	// 	this.handleIncrement = this.handleIncrement.bind(this);
+	// }
+
+	handleIncrement = () => {
+		console.log("Increment CLicked", this);
+	}
 
 	render() {
 		return (
 			<div>
 				<span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-				<button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">Increment</button>
+				<button
+					onClick={this.handleIncrement}
+					className="btn btn-secondary btn-sm"
+				>
+					Increment
+				</button>
 			</div>
 		);
 	}

@@ -11,7 +11,7 @@ export default class Counters extends Component {
 			onIncrement,
 		} = this.props;
 		return (
-			<div>
+			<>
 				<button onClick={onReset} className="btn btn-dark btn-sm m-2">
 					Reset
 				</button>
@@ -24,7 +24,7 @@ export default class Counters extends Component {
 						counter={counter}
 					/>
 				))}
-			</div>
+			</>
 		);
 	}
 }

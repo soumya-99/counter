@@ -4,10 +4,10 @@ export default class Counter extends Component {
 	render() {
 		return (
 			<div className="row">
-				<div className="col-sm-6">
+				<div className="col-6">
 					<span className={this.getBadgeClasses()} style={{fontSize: 20}}>{this.formatCount()}</span>
 				</div>
-				<div className="col-sm-6">
+				<div className="col-6">
 					<button
 						onClick={() => this.props.onIncrement(this.props.counter)}
 						className="btn btn-success btn-sm"
